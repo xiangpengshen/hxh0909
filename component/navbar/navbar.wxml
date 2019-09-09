@@ -1,16 +1,10 @@
-
-<view style="padding-top:{{someData.statusBarHeight+someData.titleBarHeight}}px">
-  <view class="hh-header">
-    <view class="status-bar" style="height:{{someData.statusBarHeight}}px"></view>
-    <view class="title-bar" style="height:{{someData.titleBarHeight}}px">
-      <view wx:if="{{isShowBack=='true'}}" class='hh-nav-back ico-back' bindtap='goback' style="background-image:url(../../images/menublack.png)">
-        <view name="back"  size="15px"  class="navbar-action_item" bind:click="_navBack"></view>
-        <view name="index"  size="15px"  class="navbar-action_item last" bind:click="_toIndex"></view>
-      </view>
-      <view wx:if="{{isShowBack=='false'}}" class='hh-nav-back'></view>
-      <view class="hh-title">{{innerTitle}}</view>
-      <view class="hh-nav-right"></view>
-    </view>
+<!--components/navbar/index.wxml-->
+<view class="navbar custom-class" style='height:{{navHeight}}px;background-color:{{bgColor}}'>
+  <view wx:if="{{showNav}}" class="navbar-action-wrap navbar-action-group row item-center" style='top:{{navTop}}px;background-color:rgba(255,255,255,.6)'>
+      <i name="return" color="{{iconColor}}" size="15px" block="{{true}}" class="navbar-action_item" bind:click="_navBack"></i>
+      <i name="shouye3" color="{{iconColor}}" size="15px" block="{{true}}" class="navbar-action_item last" bind:click="_toIndex"></i>
+  </view>
+  <view class='navbar-title' style='top:{{navTop}}px'>
+    {{pageName}}
   </view>
 </view>
-<slot></slot>

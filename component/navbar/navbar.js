@@ -1,33 +1,57 @@
-const app = getApp()
+// components/navbar/index.js
+const App = getApp();
+
 Component({
+  options: {
+    addGlobalClass: true,
+  },
+  externalClasses: ['custom-class'],
+  /**
+   * 组件的属性列表
+   */
   properties: {
-    // 这里定义了innerText属性，属性值可以在组件使用时指定
-    innerTitle: {
-      type: String,
-      value: '头部标题'
+    pageName:String,
+    showNav: {
+      type: Boolean,
+      value: true
     },
-    isShowBack: {
+    bgColor:{
       type: String,
-      value: "true"
+      value: '#fff'
+    },
+    iconColor:{
+      type: String,
+      value: '#000'
     }
   },
+
+  /**
+   * 组件的初始数据
+   */
   data: {
-    // 这里是一些组件内部数据
-    someData: {
-      statusBarHeight: app.globalData.statusBarHeight,
-      titleBarHeight: app.globalData.titleBarHeight
-    }
+   
   },
-  methods: {
-    // 这里是一个自定义方法
-    navback: function () {
-      wx.navigateBack({
-        delta: 1,
+  lifetimes: {
+    attached: function () {
+      this.setData({
+        navHeight: App.globalData.navHeight,
+        navTop: App.globalData.navTop
       })
+     }
+  },
+  /**
+   * 组件的方法列表
+   */
+  methods: {
+    //回退
+    _navBack: function () {
+      wx.navigateBack({
+        delta: 1
+      })      
     },
     //回主页
-    toIndex: function () {
-      wx.navigateTo({
+    _toIndex: function () {
+      wx.switchTab({
         url: '/pages/index/index'
       })
     },

@@ -1,0 +1,43 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 321145 */
+  src: url('//at.alicdn.com/t/font_321145_pu8s2lia5h.eot');
+  src: url('//at.alicdn.com/t/font_321145_pu8s2lia5h.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_321145_pu8s2lia5h.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_321145_pu8s2lia5h.woff') format('woff'),
+  url('//at.alicdn.com/t/font_321145_pu8s2lia5h.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_321145_pu8s2lia5h.svg#iconfont') format('svg');
+}
+.icon__info {
+  position: absolute;
+  right: 0;
+  top: -8px;
+  color: #fff;
+  font-size: 12px;
+  font-family: PingFang SC, Helvetica Neue, Arial, sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  padding: 0 3px;
+  min-width: 16px;
+  line-height: 14px;
+  border-radius: 16px;
+  background-color: #f44;
+  -webkit-transform: translateX(50%);
+  transform: translateX(50%);
+  -webkit-transform-origin: 100%;
+  transform-origin: 100%;
+  white-space: nowrap;
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.icon-shouye3:before {
+  content: "\e760";
+}
+.icon-return:before {
+  content: "\e71d";
+}
