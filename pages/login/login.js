@@ -32,7 +32,7 @@ Page({
     console.log('系统生成的验证码：' + this.data.sysyzm.toLowerCase());
     console.log('您输入的验证码：' + this.data.yzm.toLowerCase());
     wx.request({
-      url: 'https://localhost/wxlogin',//上线的话必须是https，没有appId的本地请求貌似不受影响
+      url: 'http://localhost/wxlogin',//上线的话必须是https，没有appId的本地请求貌似不受影响
       data: {
         mobile: this.data.userName,
         password: MD5.md5(this.data.password)
@@ -40,7 +40,7 @@ Page({
       method: 'POST', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
       // header: {}, // 设置请求的 header
       success: function (res) {
-        console.log(res);
+        console.log(res.data);
       },
       fail: function () {
         // fail
