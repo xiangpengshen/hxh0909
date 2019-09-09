@@ -31,6 +31,7 @@ Page({
   clickMe: function () {
     console.log('系统生成的验证码：' + this.data.sysyzm.toLowerCase());
     console.log('您输入的验证码：' + this.data.yzm.toLowerCase());
+    console.log(MD5.md5(this.data.pwd));
     wx.request({
       url: 'http://localhost/wxlogin',//上线的话必须是https，没有appId的本地请求貌似不受影响
       data: {
