@@ -73,11 +73,11 @@ Page({
     this.initDraw();
   },
   getRanNum: function () {
-    var chars = 'ABCDEFGHJKMNPQRSTWXYZabcdefhijkmnprstwxyz2345678';
+    var chars = 'ABCDEFGHJKMNPQRSTUVWXYZ123456789';
     var yzm = '';
     for (var i = 0; i < 4; i++) {
-      if (Math.random() < 48) {
-        yzm += chars.charAt(Math.random() * 48 - 1);
+      if (Math.random() < 32) {
+        yzm += chars.charAt(Math.random() * 32 - 1);
       }
     }
     this.setData({
