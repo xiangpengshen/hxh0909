@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/logs/logs"
+    "pages/logs/logs",
+    "pages/login/login"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -9,6 +10,23 @@
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black",
     "navigationStyle": "custom"
+  },
+  "tabBar": {
+    "custom": true,
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/resource/image/resource/loading.png",
+        "selectedIconPath": "pages/resource/image/resource/loading.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "日志",
+        "iconPath": "pages/resource/image/resource/loading.png",
+        "selectedIconPath": "pages/resource/image/resource/loading.png"
+      }
+    ]
   },
   "sitemapLocation": "sitemap.json"
 }
